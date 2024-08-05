@@ -1,0 +1,67 @@
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.tops {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1260px; 
+    padding: 20px; 
+    text-align: center;
+    font-size: 24px;
+  border: 1px solid rgb(22, 21, 21);
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px; 
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    width: calc(33.33% - 20px); 
+    height: 80px;
+    max-width: 400px;
+    object-fit: cover;
+}
+.img1 {
+    padding-left: 20px; 
+}
+.img2 {
+    margin-right: 80px; 
+}
+.img3 {
+    padding-left: 20px;
+}
+
+.buy-now {
+    background-color: #ff6f61; /* Accent color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #e55b50;
+}
+
+.image-content{
+ 
+    width: 200px; 
+    position: relative;
+    height: 140px; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

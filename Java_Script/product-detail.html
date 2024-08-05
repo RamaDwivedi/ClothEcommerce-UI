@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        .product-detail {
+            margin: 20px;
+            text-align: center;
+        }
+        .product-detail img {
+            max-width: 300px;
+        }
+        .add-to-cart {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-detail">
+        <img id="product-image" src="" alt="Product Image">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="cart">
+        <h3>Cart</h3>
+        <ul id="cart-items"></ul>
+    </div>
+
+    <script>
+        function loadProductDetail() {
+            const productId = localStorage.getItem('selectedProduct');
+
+           
+            const productData = {
+                'fancy-top-1': {
+                    image: 'image/top.jpeg',
+                    title: 'Fancy Top 1',
+                    description: 'Elegant and stylish top for any occasion.',
+                },
+                'fancy-top-2': {
+                    image: 'image/top1.jpeg',
+                    title: 'Fancy Top 2',
+                    description: 'Comfortable top with a modern design.',
+                },
+                'fancy-top-3': {
+                    image: 'image/top2.jpeg',
+                    title: 'Fancy Top 3',
+                    description: 'Perfect top for a casual outing.',
+                },
+                'fancy-top-4': {
+                    image: 'image/top4.jpeg',
+                    title: 'Fancy Top 4',
+                    description: 'Fashionable top with unique patterns.',
+                },
+                'fancy-top-5': {
+                    image: 'image/top7.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+                'fancy-top-6': {
+                    image: 'image/pics.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+                'fancy-top-7': {
+                    image: 'image/1.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+                'fancy-top-8': {
+                    image: 'image/2.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+                'fancy-top-9': {
+                    image: 'image/4.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+                'fancy-top-10': {
+                    image: 'image/6.jpeg',
+                    title: 'Fancy Top 5',
+                    description: 'Stylish and trendy top for any event.',
+                },
+            };
+
+            const product = productData[productId];
+            if (product) {
+                document.getElementById('product-image').src = product.image;
+                document.getElementById('product-title').textContent = product.title;
+                document.getElementById('product-description').textContent = product.description;
+            } else {
+                document.getElementById('product-title').textContent = 'Product not found';
+            }
+
+            updateCart();
+        }
+
+        function addToCart() {
+            const productId = localStorage.getItem('selectedProduct');
+            if (productId) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                if (!cart.includes(productId)) {
+                    cart.push(productId);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+                alert('Product added to cart!');
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsList = document.getElementById('cart-items');
+            cartItemsList.innerHTML = '';
+
+          
+            const productData = {
+                'fancy-top-1': 'Fancy Top 1',
+                'fancy-top-2': 'Fancy Top 2',
+                'fancy-top-3': 'Fancy Top 3',
+                'fancy-top-4': 'Fancy Top 4',
+                'fancy-top-5': 'Fancy Top 5',
+                'fancy-top-6': 'Fancy Top 6',
+                'fancy-top-7': 'Fancy Top 7',
+                'fancy-top-8': 'Fancy Top 8',
+                'fancy-top-9': 'Fancy Top 9',
+                'fancy-top-10': 'Fancy Top 10',
+            };
+
+            cart.forEach(productId => {
+                const productName = productData[productId];
+                if (productName) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = productName;
+                    cartItemsList.appendChild(listItem);
+                }
+            });
+        }
+
+        window.onload = loadProductDetail;
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <h1>Fancy Tops</h1>
+        <p>Get in Touch with Us</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Address:</strong> 123 Fashion Street, Style City, Fashionland 45678</p>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@fancytops.com">info@fancytops.com</a></p>
+            <p><strong>Business Hours:</strong> Monday - Friday: 9 AM - 6 PM</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="/submit-contact-form" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">F</a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">T</a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">I</a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">L</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fancy Tops. All rights reserved.</p>
+    </footer>
+</body>
+</html>

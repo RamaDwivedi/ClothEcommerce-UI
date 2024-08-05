@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Ecommerce</title>
+ <link rel="stylesheet" href="Design.css">
+ <link rel="stylesheet" href="Responsive.css">
+ <link rel="stylesheet" href="footer.css">
+ <link rel="stylesheet" href="image.css">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+ 
+ <script>
+    function viewProduct(productId) {
+        localStorage.setItem('selectedProduct', productId);
+        window.location.href = 'product-detail.html';
+    }
+</script>
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check" name="" value="">
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <label class="logo"><i class="fa fa-tshirt"></i> Cloth's Ecommerce</label>
+   <ul>
+      <li > <a class="active" href="#" >Home</a></li> 
+      <li><a href="About.html" >About</a></li> 
+      <li> <a  href="Contact.html" >Contact</a></li> 
+      <li> <a  href="Services.html" >Product</a></li> 
+      <li><a href="Login.html" class="login-btn">Login</a></li>
+    </ul>
+</nav>
+<div class="image-container">
+    <img src="image/top5.jpeg" alt="Full Screen Image" class="responsive-image">
+
+</div>
+<header>
+    <div class="tops">
+        Trending Tops
+    </div >
+    <div class="image-row">
+        <div class="image-content">
+            <img class="img1" src="image/top.jpeg" alt="Fancy Top 1">
+            <div class="overlay">
+                <div class="text">Fancy Top 1</div>
+                <button class="buy-now" onclick="viewProduct('fancy-top-1')">Buy Now</button>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="image/top1.jpeg" class="img3" alt="Fancy Top 2">
+            <div class="overlay">
+                <div class="text">Fancy Top 2</div>
+                <button class="buy-now" onclick="viewProduct('fancy-top-2')">Buy Now</button>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="image/top2.jpeg" class="img2" alt="Fancy Top 3">
+            <div class="overlay">
+                <div class="text">Fancy Top 3</div>
+                <button class="buy-now" onclick="viewProduct('fancy-top-3')">Buy Now</button>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="image/top4.jpeg" class="img3" alt="Fancy Top 4">
+            <div class="overlay">
+                <div class="text">Fancy Top 4</div>
+                <button class="buy-now" onclick="viewProduct('fancy-top-4')">Buy Now</button>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="image/top7.jpeg" class="img3" alt="Fancy Top 5">
+            <div class="overlay">
+                <div class="text">Fancy Top 5</div>
+                <button class="buy-now" onclick="viewProduct('fancy-top-5')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+</header>
+<footer class="footer">
+    <div class="container">
+<div class="row">
+<div class="footer-col">
+    <h4>Company</h4>
+    <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Afiilitates</a></li>
+    </ul>
+</div>
+
+<div class="footer-col">
+    <h4>Get Help</h4>
+    <ul>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Number</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">xyz</a></li>
+    </ul>
+</div>
+<div class="footer-col">
+    <h4>Online Shop</h4>
+    <ul>
+        <li><a href="#">Amazon</a></li>
+        <li><a href="#">Myntra</a></li>
+        <li><a href="#">Flipkart</a></li>
+        <li><a href="#">AJIo</a></li>
+    </ul>
+</div>
+<div class="footer-col">
+    <h4>About</h4>
+    <ul>
+        <li><a href="#">Name</a></li>
+        <li><a href="#">Id</a></li>
+        <li><a href="#">Number</a></li>
+        <li><a href="#">DOB</a></li>
+    </ul>
+</div>
+<div class="footer-col">
+    <h4>Contact</h4>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Office</a></li>
+        <li><a href="#">Urgent</a></li>
+        <li><a href="#"></a></li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+    &copy; 2024 Your Company. All rights reserved.
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Form Data</title>
+    <style>
+        .data-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Data</h1>
+    <div id="form-data-container">
+    </div>
+    <script>
+        function displayFormData() {
+            const formDataContainer = document.getElementById('form-data-container');
+            const formData = JSON.parse(localStorage.getItem('formData'));
+
+            if (formData) {
+                formDataContainer.innerHTML = `
+                    <div class="data-group"><strong>First Name:</strong> ${formData.firstName}</div>
+                    <div class="data-group"><strong>Email:</strong> ${formData.email}</div>
+                    <div class="data-group"><strong>Password:</strong> ${formData.password}</div>
+                    <div class="data-group"><strong>Confirm Password:</strong> ${formData.confirmPassword}</div>
+                    <div class="data-group"><strong>Phone:</strong> ${formData.phone}</div>
+                    <div class="data-group"><strong>Date of Birth:</strong> ${formData.dob}</div>
+                `;
+            } else {
+                formDataContainer.innerHTML = '<p>No data available</p>';
+            }
+        }
+
+        window.onload = displayFormData;
+    </script>
+</body>
+</html>
+                    

@@ -1,0 +1,35 @@
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+.footer {
+    background-color: rgba(231, 236, 238, 0.934);
+    padding: 70px 0px;
+    margin-top: auto;
+}
+.footer-col {
+    width: 20%;
+    padding: 0px 15px;
+}
+
+ul li a {
+    font-size: 10px;
+    background-color: rgb(240, 244, 247);
+    display: block;
+    padding: 5px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: darkblue;
+    color: white;
+}
+

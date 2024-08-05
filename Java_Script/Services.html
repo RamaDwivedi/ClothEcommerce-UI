@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="image.css">
+    <script>
+        function viewProduct(productId) {
+            localStorage.setItem('selectedProduct', productId);
+            window.location.href = 'product-detail.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Fancy Tops</h1>
+        <p>Our Product and Services</p>
+    </header>
+    <header class="item1">
+        <div class="top">
+            Trending Tops
+        </div >
+        <div class="image-row">
+            <div class="image-content">
+                <img class="img1" src="image/top.jpeg" alt="Fancy Top 1">
+                <div class="overlay">
+                    <div class="text">Fancy Top 1</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-1')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/top1.jpeg" class="img3" alt="Fancy Top 2">
+                <div class="overlay">
+                    <div class="text">Fancy Top 2</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-2')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/top2.jpeg" class="img2" alt="Fancy Top 3">
+                <div class="overlay">
+                    <div class="text">Fancy Top 3</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-3')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/top4.jpeg" class="img3" alt="Fancy Top 4">
+                <div class="overlay">
+                    <div class="text">Fancy Top 4</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-4')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/top7.jpeg" class="img3" alt="Fancy Top 5">
+                <div class="overlay">
+                    <div class="text">Fancy Top 5</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-5')">Buy Now</button>
+                </div>
+            </div>
+            <div class="can"></div>
+            <div class="image-content">
+                <img src="image/pics.jpeg" class="img3" alt="Fancy Top 6">
+                <div class="overlay">
+                    <div class="text">Fancy Top 6</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-6')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/1.jpeg" class="img3" alt="Fancy Top 7">
+                <div class="overlay">
+                    <div class="text">Fancy Top 7</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-7')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/2.jpeg" class="img3" alt="Fancy Top 8">
+                <div class="overlay">
+                    <div class="text">Fancy Top 8</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-8')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/4.jpeg" class="img3" alt="Fancy Top 9">
+                <div class="overlay">
+                    <div class="text">Fancy Top 9</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-9')">Buy Now</button>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image/6.jpeg" class="img3" alt="Fancy Top 10">
+                <div class="overlay">
+                    <div class="text">Fancy Top 10</div>
+                    <button class="buy-now" onclick="viewProduct('fancy-top-10')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+    <div class="container">
+        <h1>Our Product Styling</h1>
+       
+        <div class="service">
+            <h2>Personalized Styling</h2>
+            <img src="image/1.jpeg" alt="Personalized Styling">
+            <p>Our expert stylists are here to help you find the perfect outfit for any occasion.
+                 Whether you need advice on the latest trends or assistance in creating a unique look, 
+                 we offer personalized styling sessions tailored to your needs.</p>
+                 <h2>Fast Delivery</h2>
+                 <img src="image/fast.jpeg" alt="Fast Delivery">
+                 <p>We know how exciting it is to receive your new clothes.
+                    
+                    That's why we offer fast and reliable delivery options. No matter where you are, 
+                    we ensure that your orders reach you quickly and safely. 
+                    Enjoy our seamless delivery service and get your favorite tops delivered to your doorstep.</p>
+
+        </div>
+    
+        <div class="service">
+            <h2>Custom Orders</h2>
+            <img src="image/custom.jpeg" alt="Custom Orders">
+            <p>We understand that everyone has their own unique style. That's why we offer custom order services. 
+                Choose your favorite design, fabric, and color, and we'll create a bespoke top just for you. Our custom orders ensure that you get a one-of-a-kind piece that fits you perfectly.</p>
+        </div>
+    
+        <!-- <div class="service">
+            <h2>Gift Cards</h2>
+            <img src="gift.jpeg" alt="Gift Cards">
+            <p>Looking for the perfect gift? Our gift cards are an ideal choice for any fashion lover. Available in various denominations, our gift cards can be used to purchase any item from our collection. Share the joy of stylish clothing with your loved ones.</p>
+        </div> -->
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Fancy Tops. All rights reserved.</p>
+    </footer>
+</body>
+</html>
